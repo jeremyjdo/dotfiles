@@ -12,6 +12,7 @@
 [core]
   pager = less -FRSX
 	editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
+	excludesfile = /Users/jeremyjodeau/.gitignore_global
 
 [alias]
   co = checkout
@@ -48,4 +49,12 @@
   mergeoptions = --no-edit
 [user]
 	email = jeremy.jodeau@gmail.com
-	name = jeremy jodeau
+	name = Jeremy jodeau
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Users/jeremyjodeau/Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/jeremyjodeau/.stCommitMsg
